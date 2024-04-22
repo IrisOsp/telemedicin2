@@ -1,28 +1,46 @@
 <script>
-    import { Button } from '@sveltestrap/sveltestrap';
+    let username="";
+    let password="";
 
-    function search() {
-        // Her kan du tilføje funktionalitet til søgning
-    }
+    const login = async()=>{
+        const result = await fetch('/api/login', {
+            method: 'POST',
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify({
+                username: username,
+                password: password
+            })
+        });
+        const text = await result.text();
+        if (result.status===200) {
+            window.location='/home';
+        } else {
+            alert("forkert cpr eller kodeord");
+        }
+    };
 </script>
 
 <div style="display: flex; justify-content: center; align-items: center; margin-top:30px;">
     <img src="./src/routes/images/logo1.jpg" alt="HealingHub logo" style="max-width: 300px; max-height: 300px; border-radius: 5px;">
 </div>
-<br>
 
-<div class="navigation">
-    <!-- Her er de fem knapper i navigationen -->
-    <Button style="background-color: $blue-500; color: white; border-color: navy; margin-right:10px;" on:click={search}>Chat</Button>
-    <Button style="background-color: navy; color: white; border-color: navy; margin-right:10px;" on:click={search}>Øvelser</Button>
-    <Button style="background-color: navy; color: white; border-color: navy; margin-right:10px;" on:click={search}>Information</Button>
-    <Button style="background-color: navy; color: white; border-color: navy; margin-right:10px;" on:click={search}>Spørgsmål</Button>
-    <Button style="background-color: navy; color: white; border-color: navy; margin-right:10px;" on:click={search}>Kontakt</Button>
+<div style="display: flex; justify-content: center; align-items: center; margin-top:60px;">
+<h3>Login</h3>
 </div>
+<div style="display: flex; justify-content: center; align-items: center; margin-top:20px;">
+    <input bind:value={username} type="text" placeholder="Indtast CPR"/></div>
+<div style="display: flex; justify-content: center; align-items: center; margin-top:15px;">
+    <input bind:value={password} type="password" placeholder="Kodeord"/>
+</div>
+<div style="display: flex; justify-content: center; align-items: center; margin-top:30px;">
+    <button color="primary" on:click={login}>login</button>
+</div>
+
 
 <style>
     .logo {
-        /* Tilpasning af logo-styling */
     }
 
     .navigation {
@@ -32,5 +50,4 @@
         margin-top: 20px;
     }
 
-    /* Du kan tilpasse yderligere styling her */
 </style>
