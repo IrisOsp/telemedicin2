@@ -24,6 +24,10 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@sveltestrap/sveltestrap": "^6.2.7"
+		"@prisma/client": "^5.12.1",
+		"@sveltestrap/sveltestrap": "^6.2.7",
+		"bcryptjs": "^2.4.3",
+		"prisma": "^5.12.1",
+		"save-dev": "^0.0.1-security"
 	}
 }
