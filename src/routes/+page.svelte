@@ -40,9 +40,6 @@
 
 
 <style>
-    .logo {
-    }
-
     .navigation {
         display: flex;
         justify-content: center;

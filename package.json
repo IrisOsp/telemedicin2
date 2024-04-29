@@ -31,5 +31,12 @@
 		"bootstrap": "^5.3.3",
 		"jsonwebtoken": "^9.0.2",
 		"save-dev": "^0.0.1-security"
+	},
+	"scripts": {
+		"dev": "vite dev --open",
+		"build": "prisma generate && vite build",
+		"preview": "vite preview",
+		"lint": "prettier --check . && eslint .",
+		"format": "prettier --write ."
 	}
 }
