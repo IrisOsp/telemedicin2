@@ -1,4 +1,6 @@
 <script>
+    import logo from './images/logo1.jpg'
+
     let username="";
     let password="";
 
@@ -22,8 +24,8 @@
     };
 </script>
 
-<div style="display: flex; justify-content: center; align-items: center; margin-top:80px; margin-bottom:30px;">
-    <img src="./src/routes/images/logo1.jpg" alt="HealingHub logo" style="max-width: 500px; max-height: 500px; border-radius: 5px;">
+<div style="display: flex; justify-content: center; align-items: center; margin-top:30px;">
+    <img src={logo} alt="HealingHub logo" style="max-width: 300px; max-height: 300px; border-radius: 5px;">
 </div>
 
 <div class="container ">
