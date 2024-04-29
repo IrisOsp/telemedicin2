@@ -27,6 +27,7 @@
 <div style="display: flex; justify-content: center; align-items: center; margin-top:30px;">
     <img src={logo} alt="HealingHub logo" style="max-width: 300px; max-height: 300px; border-radius: 5px;">
 </div>
+<br>
 
 <div class="container ">
 
