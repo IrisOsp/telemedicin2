@@ -25,16 +25,18 @@ if (result.status === 200) {
     </div>
 </div>
 
-<div class="navigation">
-<br>    
-Dit lægehus
-<br>
+<div class="col text-center">
+    <br>
+<p style="font-weight:bold">Dit lægehus</p>
 Læge: Hans Hansen & Birgitte Hjortensen
 <br>
-Telefon: 29 78 91 05
-<br>
 Adresse: Myrevej 59, 3650 Ølstykke 
+<br>
+Telefontid: 8-12 mandag-fredag
+<br>
+Telefon: 29 78 91 05 
 </div>
+
 
 <style>
     .navigation {

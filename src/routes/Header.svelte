@@ -35,6 +35,9 @@
     <div aria-current={$page.url.pathname === "/menu/dairy" ? 'page' : undefined} style="display: flex; justify-content: flex-end;">
         <button class="btn custom-navy-btn btn-sm mt-2" on:click={() => window.location = '/menu/dairy'}>Dagbog</button>
     </div>
+    <div aria-current={$page.url.pathname === "/menu/dairy" ? 'page' : undefined} style="display: flex; justify-content: flex-end;">
+        <button class="btn custom-navy-btn btn-sm mt-2" on:click={() => window.location = '/menu/skema'}>Spørgeskema</button>
+    </div>
     <div aria-current={$page.url.pathname === "/menu/exercises" ? 'page' : undefined}  style="display: flex; justify-content: flex-end;">
         <button class="btn custom-navy-btn btn-sm mt-2" on:click={() => window.location = '/menu/exercises'} > Øvelser</button>
     </div>

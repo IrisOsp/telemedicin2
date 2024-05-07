@@ -25,7 +25,7 @@ if (result.status === 200) {
 </div>
 
 <div class="navigation">
-  spurningar
+  Spørgsmål
 </div>
 
 <style>
