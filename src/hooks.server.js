@@ -1,6 +1,3 @@
-import {PrismaClient} from '@prisma/client';
-import { env } from '$env/dynamic/private';
-import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 
 export async function handle({ event, resolve }) {
